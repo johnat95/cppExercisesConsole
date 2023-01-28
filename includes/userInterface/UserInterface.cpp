@@ -31,11 +31,18 @@ void UserInterface::printMenu(){
 void UserInterface::printAreaOfCircleEvaluation(double a){
     std::cout << "The area of the circle is " << a << "\n";
 
-}void UserInterface::printAreaOfCircleEvaluation(double a, int percision){
+}
+void UserInterface::printAreaOfCircleEvaluation(double a, int percision){
     std::cout << "The area of the circle is " << std::setprecision(percision) << a << "\n";
 }
+
+void UserInterface::printAddressAndValue(std::string label, int &a){
+    int *ptr = &a;
+    std::cout << label << ": " << *ptr << " at " << ptr << "\n\n";
+
+}
 //* Print methods end
-//* User Input getter
+//* User Input getters
 
 int UserInterface::getIntUserInput(){
     int res = -1;
@@ -75,15 +82,22 @@ bool UserInterface::getBoolUserInput(){
         std::cin >> res;
 
         //is res is not  y or n, set to empty
-        int a = res.compare("y");
-        int b = res.compare("n");
-        if(a != 0 && b != 0){
+        if(res.compare("y") != 0 && res.compare("n") != 0){
             res = "";
         }
 
     }while(res.compare("") == 0);
 
     return res.compare("y") == 0 ? true:false;
+
+}
+
+std::string UserInterface::getUserStringInput(){
+
+    std::string res;
+    std::cin >> res;
+
+    return res;
 }
 
 

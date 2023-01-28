@@ -14,6 +14,8 @@ namespace UserInterface{
 
     void printAreaOfCircleEvaluation(double area, int percision);//prints area of circle evaluation with percision
 
+    void printAddressAndValue(std::string label, int &a); //prints the address and value of a variable
+
 //* Print methods end
 //* User Input getters
 
@@ -24,6 +26,8 @@ namespace UserInterface{
     double getDoubleUserInput();// get and validate user double input
 
     bool getBoolUserInput(); //gets and validates user bool input
+
+    std::string getUserStringInput(); //gets and validates user string input
 
 //* User input getters end
 //* String constants
@@ -46,17 +50,19 @@ namespace AreaOfCircleStrings
 
 namespace JobCandidateStrings
 {
-    constexpr const char* LANG_QUESTION = "What Languges do you speak?\n";
+    constexpr const char* LANG_QUESTION = "Do you speak French and English?\n";
     constexpr const char* YEARS_QUESTION = "How many years of expirience do you have?\n";
     constexpr const char* DEGREE_QUESTION = "What degree do you hold? Enter one of the following:\n";
     constexpr const char* DEGREE_OPTIONS = " none, associate, bachelor, master, doctor, professional.\n";
+    constexpr const char* FAIL = "I'm sorry, you are not qualified.";
+    constexpr const char* SUCCESS = "Congratulations, you are qualified!";
 
 } // namespace JobCandidateStrings
 
 namespace OneToArbitraryLimitStrings
 {
     constexpr const char* PROGRAM_EXPLINATION = "This program will count all numbers from one to the limit you provide,\n"
-                                                "excluding multiples of 6 and 17.";
+                                                "excluding multiples of 6 and 17.\n";
     constexpr const char* NUMBER_QUESTION = "What number do you want to count to?\n";
 
 } // namespace OneToArbitraryLimitStrings
@@ -64,7 +70,7 @@ namespace OneToArbitraryLimitStrings
 namespace SwapValuesStrings
 {
     constexpr const char* ENTER_VALUES = "Enter two integers and this program will print thier addresses,\n"
-                                            "then swap the values. The addresses will remain the same.";
+                                            "then swap the values. The addresses will remain the same.\n";
 } // namespace SwapValuesStrings
 
 namespace DynamicArrayAllocationStrings
