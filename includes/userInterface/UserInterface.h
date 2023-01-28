@@ -44,7 +44,48 @@ namespace AreaOfCircleStrings
 
 } // namespace AreaOfCircleStrings
 
+namespace JobCandidateStrings
+{
+    constexpr const char* LANG_QUESTION = "What Languges do you speak?\n";
+    constexpr const char* YEARS_QUESTION = "How many years of expirience do you have?\n";
+    constexpr const char* DEGREE_QUESTION = "What degree do you hold? Enter one of the following:\n";
+    constexpr const char* DEGREE_OPTIONS = " none, associate, bachelor, master, doctor, professional.\n";
 
+} // namespace JobCandidateStrings
+
+namespace OneToArbitraryLimitStrings
+{
+    constexpr const char* PROGRAM_EXPLINATION = "This program will count all numbers from one to the limit you provide,\n"
+                                                "excluding multiples of 6 and 17.";
+    constexpr const char* NUMBER_QUESTION = "What number do you want to count to?\n";
+
+} // namespace OneToArbitraryLimitStrings
+
+namespace SwapValuesStrings
+{
+    constexpr const char* ENTER_VALUES = "Enter two integers and this program will print thier addresses,\n"
+                                            "then swap the values. The addresses will remain the same.";
+} // namespace SwapValuesStrings
+
+namespace DynamicArrayAllocationStrings
+{
+    constexpr const char* ARRAY_LENGTH_QUESTION = "How many idecies do you want to allocate? The values will be 1/(i+1)^2\n"
+                                                    " where i is the index. The values will be summed, and the square root\n"
+                                                    "of that sum will be printed.\n";
+} // namespace DynamicArrayAllocationStrings
+
+namespace ThreeValueAddressesStrings
+{
+    constexpr const char* PROGRAM_EXPLINATION = "You will be prompted for a double, and int, and a string; Thier addresses\n"
+                                                "and values will be printed to the console.\n";
+} // namespace ThreeValueAddressesStrings
+
+namespace SixIntMemAllocStrings
+{
+    constexpr const char* NUMBER_PROMPT = "Enter 6 integers to allocate to memeory, they will be printed in reverse order.\n";
+} // namespace SixIntMemAllocStrings
 
 }
+
+
 #endif
