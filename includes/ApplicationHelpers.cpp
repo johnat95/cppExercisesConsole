@@ -38,3 +38,27 @@ void ApplicationHelpers::handleAreaOfCircle(){
         }
 
  }
+
+ void ApplicationHelpers::handleJobCandidate(){
+
+ }
+
+ void ApplicationHelpers::handleSwapValues(){
+
+ }
+
+ void ApplicationHelpers::handleDynamicFloatArray(){
+
+ }
+
+ void ApplicationHelpers::handleListOneToArbitrary(){
+
+ }
+
+ void ApplicationHelpers::handleSixIntMemory(){
+
+ }
+
+ void ApplicationHelpers::handleThreeValueAddresses(){
+
+ }
