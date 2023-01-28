@@ -27,20 +27,29 @@ void UserInterface::printMenu(){
     }
 }
 
-void printAreaOfCircleEvaluation(double a){
-    std::cout << "The area of the circle is " << a;
+void UserInterface::printAreaOfCircleEvaluation(double a){
+    std::cout << "The area of the circle is " << a << "\n";
 
-}void printAreaOfCircleEvaluation(double a, int percision){
-    std::cout << "The area of the circle is " << std::setprecision(percision) << a;
+}void UserInterface::printAreaOfCircleEvaluation(double a, int percision){
+    std::cout << "The area of the circle is " << std::setprecision(percision) << a << "\n";
 }
 //* Print methods end
-//* User Input getters
+//* User Input getter
 
 int UserInterface::getIntUserInput(){
     int res = -1;
     do{
         std::cin >> res;
         //!! Validate integer
+    }while(res == -1);
+    return res;
+}
+
+int UserInterface::getIntUserInput(int limit1, int limit2){
+    int res = -1;
+    do{
+        std::cin >> res;
+        //!! Validate integer, check limits
     }while(res == -1);
     return res;
 }
@@ -52,6 +61,7 @@ double UserInterface::getDoubleUserInput(){
         std::cin >> res;
         //!! Validate double
     }while(res == -1.0);
+
     return res;
 
 }
@@ -60,17 +70,19 @@ bool UserInterface::getBoolUserInput(){
     std::string res = "";
 
     do{
-        std::cout << "Please enter y for yes, n for no";
+        std::cout << "Please enter y for yes, n for no\n";
         std::cin >> res;
 
         //is res is not  y or n, set to empty
-        if(res.compare("y") != 0 || res.compare("n") != 0){
+        int a = res.compare("y");
+        int b = res.compare("n");
+        if(a != 0 && b != 0){
             res = "";
         }
 
-    }while(res.compare("")== 0);
+    }while(res.compare("") == 0);
 
-    return res.compare("y");
+    return res.compare("y") == 0 ? true:false;
 }
 
 

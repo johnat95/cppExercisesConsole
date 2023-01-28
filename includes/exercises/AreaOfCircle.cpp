@@ -6,7 +6,9 @@
 using namespace AreaOfCircle;
 
 double AreaOfCircle::calcAreaOfCircle(double r){
-    return pow(M_1_PI*r,2);
+    double area = r*r*M_PI;
+    return area;
 }
+
 
 

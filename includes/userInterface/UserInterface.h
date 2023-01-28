@@ -19,6 +19,8 @@ namespace UserInterface{
 
     int getIntUserInput(); //gets and validates user integer input
 
+    int getIntUserInput(int limit1, int limit2); //gets and validates user integer input between limits
+
     double getDoubleUserInput();// get and validate user double input
 
     bool getBoolUserInput(); //gets and validates user bool input

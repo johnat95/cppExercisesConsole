@@ -6,7 +6,7 @@
 
 int main(int argc, char const *argv[])
 {
-   Application::App::start();
+    Application::start();
 
 
     return 0;

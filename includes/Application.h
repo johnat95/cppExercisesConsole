@@ -3,12 +3,11 @@
 
 namespace Application{
 
-    class App{
-        public:
-           static void start();
-    };
-}
 
+    void start(); //starts the application
+
+
+}
 
 
 #endif
