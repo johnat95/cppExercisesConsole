@@ -24,7 +24,7 @@
                 "${workspaceFolder}/includes/exercises/*.h",
 
                 "-o",
-                "${workspaceFolder}/build/${fileBasenameNoExtension}"
+                "${workspaceFolder}/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${fileDirname}"
