@@ -16,7 +16,7 @@ void UserInterface::printMenu(){
 
     //array hold a list of programs offered
     std::array <std::string, 7> programOptions {"Area of a Circle", "Find Job Candidate", "List Numbers to Arbitrary Limit",
-                                        "Dynamic Float Array", "Address of Three Values", "Swap Values", "Six Int Memory"};
+                                        "Sum and Square Dynamic Array", "Address of Three Values", "Swap Values", "Six Int Memory"};
 
     std::cout << UserInterface::MenuInstructions::MAIN_MENU_INSTRUCTION;
 
@@ -99,6 +99,7 @@ std::string UserInterface::getUserStringInput(){
 
     return res;
 }
+
 
 
 

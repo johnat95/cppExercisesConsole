@@ -35,7 +35,7 @@ void Application::start(){
                         ApplicationHelpers::handleListOneToArbitrary();break;
 
                 case 4://handles Dynamic Float Array
-                        ApplicationHelpers::handleDynamicFloatArray();break;
+                        ApplicationHelpers::handleSumSquareArray();break;
 
                 case 5://handles Addressing of 3 values
                         ApplicationHelpers::handleThreeValueAddresses();break;

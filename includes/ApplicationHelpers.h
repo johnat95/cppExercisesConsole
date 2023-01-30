@@ -12,7 +12,7 @@ namespace ApplicationHelpers{
 
     void handleJobCandidate();
 
-    void handleDynamicFloatArray();
+    void handleSumSquareArray();
 
     void handleThreeValueAddresses();
 

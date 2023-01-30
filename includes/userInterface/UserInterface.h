@@ -29,6 +29,8 @@ namespace UserInterface{
 
     std::string getUserStringInput(); //gets and validates user string input
 
+
+
 //* User input getters end
 //* String constants
 
@@ -69,7 +71,7 @@ namespace OneToArbitraryLimitStrings
 
 namespace SwapValuesStrings
 {
-    constexpr const char* ENTER_VALUES = "Enter two integers and this program will print thier addresses,\n"
+    constexpr const char* ENTER_VALUES = "Enter two integers and this program will print their addresses,\n"
                                             "then swap the values. The addresses will remain the same.\n";
 } // namespace SwapValuesStrings
 

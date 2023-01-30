@@ -5,6 +5,9 @@
 #include "exercises/AreaOfCircle.h"
 #include "exercises/JobCandidate.h"
 #include "exercises/SwapValues.h"
+#include "exercises/OneToArbitrary.h"
+#include "exercises/SixIntMemeory.h"
+#include "exercises/SumSquareArray.h"
 
 #include "userInterface/UserInterface.h"
 
@@ -98,15 +101,28 @@ void ApplicationHelpers::handleAreaOfCircle(){
 
  }
 
- void ApplicationHelpers::handleDynamicFloatArray(){
+ void ApplicationHelpers::handleSumSquareArray(){
+
+  std::cout << UserInterface::DynamicArrayAllocationStrings::ARRAY_LENGTH_QUESTION;
+
+  printf("%f\n", SumSquareArray::sumSquareArray(UserInterface::getIntUserInput()));
 
  }
 
  void ApplicationHelpers::handleListOneToArbitrary(){
 
+  std::cout << UserInterface::OneToArbitraryLimitStrings::PROGRAM_EXPLINATION;
+  std::cout << UserInterface::OneToArbitraryLimitStrings::NUMBER_QUESTION;
+
+  OneToArbitrary::produceNumbersandWrite(UserInterface::getIntUserInput());
+
  }
 
  void ApplicationHelpers::handleSixIntMemory(){
+
+  std::cout << UserInterface::SixIntMemAllocStrings::NUMBER_PROMPT;
+
+  SixIntegerMemory::printArrayReverse( SixIntegerMemory::getInts(6),6);
 
  }
 
