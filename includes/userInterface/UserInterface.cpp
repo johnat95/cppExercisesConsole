@@ -33,7 +33,7 @@ void UserInterface::printAreaOfCircleEvaluation(double a){
 
 }
 void UserInterface::printAreaOfCircleEvaluation(double a, int percision){
-    std::cout << "The area of the circle is " << std::setprecision(percision) << a << "\n";
+    std::cout << "The area of the circle is " << std::setprecision(percision+2) << a << "\n";
 }
 
 void UserInterface::printAddressAndValue(std::string label, int &a){
@@ -45,6 +45,9 @@ void UserInterface::printAddressAndValue(std::string label, int &a){
 //* User Input getters
 
 int UserInterface::getIntUserInput(){
+
+std::cout << "Integer: ";
+
     int res = -1;
     do{
         std::cin >> res;
@@ -54,6 +57,9 @@ int UserInterface::getIntUserInput(){
 }
 
 int UserInterface::getIntUserInput(int limit1, int limit2){
+
+    std::cout << "Integer: ";
+
     int res = -1;
     do{
         std::cin >> res;
@@ -63,6 +69,8 @@ int UserInterface::getIntUserInput(int limit1, int limit2){
 }
 
 double UserInterface::getDoubleUserInput(){
+
+    std::cout << "Double: ";
 
     double res = -1.0;
     do{
@@ -75,10 +83,14 @@ double UserInterface::getDoubleUserInput(){
 }
 
 bool UserInterface::getBoolUserInput(){
+
     std::string res = "";
 
     do{
         std::cout << "Please enter y for yes, n for no\n";
+
+        std::cout << "y|n: ";
+
         std::cin >> res;
 
         //is res is not  y or n, set to empty
@@ -93,6 +105,8 @@ bool UserInterface::getBoolUserInput(){
 }
 
 std::string UserInterface::getUserStringInput(){
+
+    std::cout << "Text: ";
 
     std::string res;
     std::cin >> res;

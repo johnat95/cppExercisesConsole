@@ -8,6 +8,7 @@
 #include "exercises/OneToArbitrary.h"
 #include "exercises/SixIntMemeory.h"
 #include "exercises/SumSquareArray.h"
+#include "exercises/AdressOFThreeValues.h"
 
 #include "userInterface/UserInterface.h"
 
@@ -53,27 +54,44 @@ void ApplicationHelpers::handleAreaOfCircle(){
     std::cout << UserInterface::JobCandidateStrings::DEGREE_QUESTION;
     std::cout << UserInterface::JobCandidateStrings::DEGREE_OPTIONS;
 
-    passing = JobCandidate::evaluateDegreeRequirements();
+
+    passing = JobCandidate::evaluateDegreeRequirements(UserInterface::getIntUserInput());
 
     if(passing){
-      passing = JobCandidate::evaluateExpirienceRequirement();
-    }else{
-      std::cout << UserInterface::JobCandidateStrings::FAIL;
-    }
 
+      std::cout << UserInterface::JobCandidateStrings::YEARS_QUESTION;
+
+      passing = JobCandidate::evaluateExpirienceRequirement(UserInterface::getIntUserInput());
+
+    }else{
+
+      goto fail;
+
+    }
 
     if(passing){
-      passing = JobCandidate::evaluateLanguageRequirements();
+
+      std::cout << "Do you speak French?\n";
+      bool a = UserInterface::getBoolUserInput();
+
+      std::cout << "Do you speak English?\n";
+      bool b = UserInterface::getBoolUserInput();
+
+      passing = JobCandidate::evaluateLanguageRequirements(a,b);
     }else{
-      std::cout << UserInterface::JobCandidateStrings::FAIL;
+
+      goto fail;
+
     }
 
-  //final success check
     if(passing){
       std::cout << UserInterface::JobCandidateStrings::SUCCESS;
-    }else{
-      std::cout << UserInterface::JobCandidateStrings::FAIL;
+    return;
     }
+
+    fail:
+      std::cout << UserInterface::JobCandidateStrings::FAIL;
+      return;
 
  }
 
@@ -105,6 +123,8 @@ void ApplicationHelpers::handleAreaOfCircle(){
 
   std::cout << UserInterface::DynamicArrayAllocationStrings::ARRAY_LENGTH_QUESTION;
 
+  std::cout << "Number of indecies: ";
+
   printf("%f\n", SumSquareArray::sumSquareArray(UserInterface::getIntUserInput()));
 
  }
@@ -127,5 +147,27 @@ void ApplicationHelpers::handleAreaOfCircle(){
  }
 
  void ApplicationHelpers::handleThreeValueAddresses(){
+
+  std::string s;
+  int i;
+  double d;
+
+  std::cout << UserInterface::ThreeValueAddressesStrings::PROGRAM_EXPLINATION;
+
+  std::cout << "Enter a string: ";
+  s = UserInterface::getUserStringInput();
+
+  std::cout << "Enter an integer: ";
+  i = UserInterface::getIntUserInput();
+
+  std::cout << "Enter an Double: ";
+  d = UserInterface::getDoubleUserInput();
+
+  std::cout << "\n\n";
+
+  ThreeAddresses::printAdresses(s,i,d);
+
+  std::cout << "\n\n";
+
 
  }

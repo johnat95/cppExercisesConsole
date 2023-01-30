@@ -45,7 +45,7 @@ namespace AreaOfCircleStrings
 {
 
     constexpr const char* PERCISION_QUESTION = "Do you want to set percision?\n";
-    constexpr const char* DECIMAL_QUESTION = "How many decimel places?\n";
+    constexpr const char* DECIMAL_QUESTION = "How many decimel places would you like to show?\n";
     constexpr const char* RADIUS_QUESTION = "What is the radius of the circle?\n";
 
 } // namespace AreaOfCircleStrings
@@ -54,10 +54,10 @@ namespace JobCandidateStrings
 {
     constexpr const char* LANG_QUESTION = "Do you speak French and English?\n";
     constexpr const char* YEARS_QUESTION = "How many years of expirience do you have?\n";
-    constexpr const char* DEGREE_QUESTION = "What degree do you hold? Enter one of the following:\n";
-    constexpr const char* DEGREE_OPTIONS = " none, associate, bachelor, master, doctor, professional.\n";
-    constexpr const char* FAIL = "I'm sorry, you are not qualified.";
-    constexpr const char* SUCCESS = "Congratulations, you are qualified!";
+    constexpr const char* DEGREE_QUESTION = "What degree do you hold? Enter one of numbers correponding to your highest degree:\n";
+    constexpr const char* DEGREE_OPTIONS = "1. None, 2. Associate, 3. Bachelor, 4. Master, 5. Doctor, 6. Professional.\n";
+    constexpr const char* FAIL = "\nI'm sorry, you are not qualified.\n\n";
+    constexpr const char* SUCCESS = "\nCongratulations, you are qualified!\n\n";
 
 } // namespace JobCandidateStrings
 
@@ -84,7 +84,7 @@ namespace DynamicArrayAllocationStrings
 
 namespace ThreeValueAddressesStrings
 {
-    constexpr const char* PROGRAM_EXPLINATION = "You will be prompted for a double, and int, and a string; Thier addresses\n"
+    constexpr const char* PROGRAM_EXPLINATION = "You will be prompted for a double, and int, and a string; Their addresses\n"
                                                 "and values will be printed to the console.\n";
 } // namespace ThreeValueAddressesStrings
 

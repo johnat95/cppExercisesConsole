@@ -3,13 +3,13 @@
 
 namespace JobCandidate{
 
-    enum AcademicDegree {none, associate, bachelor, master, doctor, professional,last_enum};
+    enum AcademicDegree {none, associate, bachelor, master, doctor, professional};
 
-    bool evaluateDegreeRequirements(); //evaluates the candidates degree
+    bool evaluateDegreeRequirements(int res); //evaluates the candidates degree
 
-    bool evaluateLanguageRequirements(); //evaluates the candidates languge knowledge
+    bool evaluateLanguageRequirements(bool speaksFrench, bool speaksEnglish); //evaluates the candidates languge knowledge
 
-    bool evaluateExpirienceRequirement(); //evaluates the candidates years of expirience
+    bool evaluateExpirienceRequirement(int years); //evaluates the candidates years of expirience
 
 }
 

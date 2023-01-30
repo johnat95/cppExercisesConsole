@@ -18,6 +18,9 @@ void Application::start(){
        while (running)
        {
                 UserInterface::printMenu();
+
+                std::cout << "Selection: ";
+
                 int res = UserInterface::getIntUserInput();
 
                 switch (res)
